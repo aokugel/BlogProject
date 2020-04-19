@@ -16,8 +16,8 @@
        {% block content %}
          {% for i in object_list %}
              <div class="article">
-             <h3><a href="">{{ i.title }}</a></h3>
-               <p>{{ i.body }}</p>
+             <h3><a href="{% url 'detail' i.pk %}">{{ i.title }}</a></h3>
+               {% comment %} <p>{{ i.body }}</p> {% endcomment %}
             </div>
          {% endfor %}
         {% endblock content %}
