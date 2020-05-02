@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9d3fb4256e94db10fa99401c8db8dc87aac5cbbf
     <title>Document</title>
 </head>
 <body>
@@ -13,8 +17,18 @@
     <form method="POST">
         {% csrf_token %}
         {{ form }}
-        <input type="submit" />
+        <input class="btn btn-primary btn-sm" type="submit" />
+        <div class="form-group">
+            <fieldset class="form-group">
+                <legend>Login desirability</legend>
+                <label for="customRange1">How badly do you want to login</label>
+                <input type="range" class="custom-range" id="customRange1">
+            </fieldset>
+        </div>
+
     </form>
+
+    
     
 </body>
 </html>
