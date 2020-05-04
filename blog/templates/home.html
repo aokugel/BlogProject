@@ -13,16 +13,6 @@
      <header>
        <h1 style="text-align: center;"> Offical Iowa State Alumni Django Blog </h1>
      </header>
-     <div class="container">
-       {% block content %}
-         {% for i in object_list %}
-             <div class="article">
-             <h3><a href="{% url 'detail' i.pk %}">{{ i.title }}</a></h3>
-               {% comment %} <p>{{ i.body }}</p> {% endcomment %}
-            </div>
-         {% endfor %}
-        {% endblock content %}
-     </div>
      <div class="jumbotron">
       <h1 class="display-3">Hello Cyclone Nation!</h1>
       <p class="lead">This is a central place of gathering to discuss utter inferiority of the University of Iowa.</p>
@@ -31,6 +21,16 @@
       <p class="lead">
         <a class="btn btn-primary btn-lg" href="/blog/login" role="button">Login</a>
       </p>
+    </div>
+    <div class="container">
+      {% block content %}
+        {% for i in object_list %}
+            <div class="article">
+            <h3><a href="{% url 'detail' i.pk %}">{{ i.title }}</a></h3>
+              {% comment %} <p>{{ i.body }}</p> {% endcomment %}
+           </div>
+        {% endfor %}
+       {% endblock content %}
     </div>
  </body> 
 </html>
